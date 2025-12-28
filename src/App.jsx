@@ -101,7 +101,7 @@ function App() {
 
       <div className="app-layout">
         {/* Sidebar Navigation */}
-        <nav className="sidebar">
+        <nav className="sidebar" aria-label="Exercise Navigation">
           {Object.entries(categories).map(([category, categoryExercises]) => (
             <div key={category} className="nav-category">
               <h3>{category}</h3>
@@ -113,6 +113,9 @@ function App() {
                         activeExercise.id === exercise.id ? "active" : ""
                       }
                       onClick={() => setActiveExercise(exercise)}
+                      aria-current={
+                        activeExercise.id === exercise.id ? "page" : undefined
+                      }
                     >
                       <span className="exercise-id">{exercise.id}</span>
                       <span className="exercise-title">{exercise.title}</span>
@@ -127,6 +130,14 @@ function App() {
         {/* Main Content */}
         <main className="main-content">{renderActiveComponent()}</main>
       </div>
+
+      {/* Footer */}
+      <footer className="app-footer">
+        <p>
+          © {new Date().getFullYear()} React Advanced Lab | Built with React &
+          Vite
+        </p>
+      </footer>
     </div>
   );
 }
