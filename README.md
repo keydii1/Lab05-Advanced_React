@@ -1,16 +1,75 @@
-# React + Vite
+# Lab 5: React Advanced - Practical Exercises
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive React project demonstrating advanced concepts and patterns.
 
-Currently, two official plugins are available:
+## 📚 Exercises Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Part 1: Complex State Management
 
-## React Compiler
+- **Exercise 1.1**: UserProfile with useReducer for handling complex state transitions
+- **Exercise 1.2**: ShoppingCart with Redux Toolkit for global state management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Part 2: Performance Engineering
 
-## Expanding the ESLint configuration
+- **Exercise 2.1**: Dashboard with useMemo and React.memo optimization
+- **Exercise 2.3**: AdminPanel with lazy loading and code splitting
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Part 3: Advanced Design Patterns
+
+- **Exercise 3.1**: Compound Components pattern (Tabs)
+- **Exercise 3.2**: Modal with React Portal
+
+### Part 4: Testing Strategies
+
+- **Exercise 4.1**: LoginForm with integration tests
+- **Exercise 4.2**: ErrorBoundary with error handling tests
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Run tests
+npm test
+```
+
+## 🛠️ Tech Stack
+
+- **React 18** - UI Library
+- **Vite** - Build Tool
+- **Redux Toolkit** - State Management
+- **Jest & React Testing Library** - Testing
+- **ESLint** - Code Linting
+
+## 📁 Project Structure
+
+```
+src/
+├── exercises/
+│   ├── exercise1-1/    # useReducer example
+│   ├── exercise1-2/    # Redux Toolkit example
+│   ├── exercise2-1/    # Performance optimization
+│   ├── exercise2-3/    # Code splitting
+│   ├── exercise3-1/    # Compound components
+│   ├── exercise3-2/    # React Portals
+│   ├── exercise4-1/    # Form testing
+│   └── exercise4-2/    # Error boundary testing
+├── store/              # Redux store configuration
+├── App.jsx             # Main application
+└── main.jsx            # Entry point
+```
+
+## 📝 License
+
+This project is for educational purposes.
