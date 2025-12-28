@@ -1,0 +1,245 @@
+.dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.dashboard-container.light {
+  background: #ffffff;
+  color: #2c3e50;
+}
+
+.dashboard-container.dark {
+  background: #1a1a2e;
+  color: #eaf0f6;
+}
+
+.dashboard-container h2 {
+  border-bottom: 3px solid #9b59b6;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  background: rgba(155, 89, 182, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #9b59b6;
+}
+
+.description code {
+  background: rgba(155, 89, 182, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #9b59b6;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: flex;
+  gap: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.theme-btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+}
+
+.sort-select,
+.filter-select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #9b59b6;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: white;
+}
+
+.dark .sort-select,
+.dark .filter-select {
+  background: #16213e;
+  color: white;
+}
+
+.load-btn {
+  padding: 0.75rem 1.5rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-btn:hover {
+  background: #2980b9;
+}
+
+/* List Header */
+.list-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 120px 60px;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #9b59b6;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* List Container */
+.list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e9ecef;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.dark .list-container {
+  border-color: #2d3748;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 120px 60px;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+  align-items: center;
+}
+
+.dark .list-item {
+  border-bottom-color: #2d3748;
+}
+
+.list-item:hover {
+  background: rgba(155, 89, 182, 0.1);
+}
+
+.item-id {
+  color: #9b59b6;
+  font-weight: bold;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-value {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.item-category {
+  background: #e9ecef;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.dark .item-category {
+  background: #2d3748;
+}
+
+.delete-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+.more-items {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Optimization Tips */
+.optimization-tips {
+  margin-top: 1.5rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #27ae60;
+}
+
+.dark .optimization-tips {
+  background: #16213e;
+}
+
+.optimization-tips h4 {
+  margin: 0 0 1rem 0;
+  color: #27ae60;
+}
+
+.optimization-tips ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.optimization-tips li {
+  margin-bottom: 0.5rem;
+}
+
+.optimization-tips code {
+  background: rgba(39, 174, 96, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #27ae60;
+}
